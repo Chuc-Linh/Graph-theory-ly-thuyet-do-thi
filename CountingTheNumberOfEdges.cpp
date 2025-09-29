@@ -39,4 +39,5 @@ int main()
 	docfile(file,a);
 	cout<<tongcanhmatran(a);
 	return 0;
+
 }
