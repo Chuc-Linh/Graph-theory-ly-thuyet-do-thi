@@ -19,11 +19,6 @@ int main() {
    vector<int> indeg(n+1,0);
     vector<int>outdeg(n+1,0);
 
-    for (int i = 1; i <= n; i++) {
-        indeg[i] = 0;
-        outdeg[i] = 0;
-    }
-
     for (int i = 0; i < m; i++) {
         int u, v;
         fin >> u >> v;
@@ -44,4 +39,5 @@ int main() {
 
     return 0;
 }
+
 
