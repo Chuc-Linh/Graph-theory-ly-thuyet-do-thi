@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include<vector>
 #include <map>
 #include <set>
 using namespace std;
@@ -15,7 +16,8 @@ int main() {
     fin >> n >> m;
 
     map<int, set<int>> adj; // danh sách kề: u -> {v}
-    map<int, int> indeg, outdeg; // bậc vào, bậc ra
+   vector<int> indeg(n+1,0);
+    vector<int>outdeg(n+1,0);
 
     for (int i = 1; i <= n; i++) {
         indeg[i] = 0;
@@ -25,8 +27,7 @@ int main() {
     for (int i = 0; i < m; i++) {
         int u, v;
         fin >> u >> v;
-        adj[u].insert(v);
-
+        
         // cập nhật bậc
         outdeg[u]++;
         indeg[v]++;
@@ -43,3 +44,4 @@ int main() {
 
     return 0;
 }
+
