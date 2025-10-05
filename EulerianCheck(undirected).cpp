@@ -58,13 +58,40 @@ int tinhdegree(int u)
 	if(tong == n) return 1;
 	return 0;
 }
-
+void find(int u)
+{
+	stack<int> st;
+	vector<int> ec; 
+	st.push(u);
+	while(!st.empty())
+	{
+		int c=st.top();
+		if(a[c].size()!=0)
+		{
+			int d=*a[c].begin();
+			st.push(d);
+			a[c].erase(d);
+			a[d].erase(c);
+		}
+		else {
+			st.pop();
+			ec.push_back(c);
+		}
+	}
+	for(int i:ec) cout<<i<<" ";
+}
 int main()
 {
 	int Degree = tinhdegree(1);
 	int connected = connectedcomponent();
-	if(Degree&& connected) cout<<"That's an Eulerian Circle";
+	if(Degree&& connected) 
+	{
+		cout<<"That's an Eulerian Circle"<<endl;
+		cout<<"Eulerian Circle is: ";
+		find(1);
+	}
 	else cout<<" Not Eulerian Circle";
 
 	return 0;
 }
+
