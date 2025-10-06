@@ -9,7 +9,9 @@ using namespace std;
 + Đối với ma trận kề với n là số đỉnh: thì điều kiện lấy đỉnh như sau:
 	for (int v = 1; v <= n; v++) {
         if (a[u][v] == 1 && !visited[v]) {
-            DFS(v);
+            q.push(v);
+            visited[v] = true;
+			}
 	+ ĐỐi với danh sách kề thì chúng ta xem cái ở dưới nhe
 
 			
@@ -91,4 +93,5 @@ int main()
 	return 0;
 
 }
+
 
