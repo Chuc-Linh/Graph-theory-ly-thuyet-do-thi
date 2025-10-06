@@ -18,7 +18,7 @@ void docfile(ifstream &file, vector<vector<int>> &a)
 	}
 }
 
-int tongcanhmatran(vector<vector<int>> a)
+int tongcanhmatrix(vector<vector<int>> a)
 {
 	int dem=0;
 for(int i=0;i<a.size();i++)
@@ -37,7 +37,8 @@ int main()
 	ifstream file;
 	vector<vector<int>>a;
 	docfile(file,a);
-	cout<<tongcanhmatran(a);
+	cout<<tongcanhmatrix(a);
 	return 0;
 
 }
+
