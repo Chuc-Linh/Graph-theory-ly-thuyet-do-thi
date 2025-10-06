@@ -4,29 +4,34 @@
 #include <cstring>
 using namespace std;
 
-/* khi đầu vào dữ liệu khác nhau như ma trận kề, danh sách cạnh, danh sách kề thì thuật toán DFS và BFS sẽ không đổi nhưng cách đọc sẽ khác nhau:
-+ bài ở dưới là danh sách cạnh 
-+ Đối với ma trận kề với n là số đỉnh: thì điều kiện lấy đỉnh như sau:
-	for (int v = 1; v <= n; v++) {
-        if (a[u][v] == 1 && !visited[v]) {
-            q.push(v);
-            visited[v] = true;
+/* khi đầu vào dữ liệu khác nhau như ma trận kề, danh sách cạnh, danh sách kề thì thuật toán DFS và BFS sẽ không đổi nhưng cách đọc sẽ khác nhau. 
+CHúng ta sẽ đổi về danh sách kề hết để thực hiện đc đồng bộ hơn nek
++ Bài ở dưới là danh sách cạnh
++ Đối với ma trận kề
+			file>>n;
+			for(int i=1;i<=n;i++)
+			{
+				for(int j=1;j<=n;j++)
+				{
+					int x;file>>x;
+					if(x==1){
+						adj[i].insert(j);
+						adj[j].insert(i);
+					}
+				}
 			}
-	+ ĐỐi với danh sách kề thì chúng ta xem cái ở dưới nhe
-
-			
 Thường người ta sẽ cho đọc từ file ha thế mik sẽ đọc thế nào cho ổn nek
 + Đối với danh sách cạnh thì thay vì mik cin>>x>>y đổi thành file>>x>>y nhưng nếu nó không cho mik số cạnh ban đầu thì mik duyệt hết file 
 		while (file >> u >> v) {   // đọc đến hết file
 		        adj[u].push_back(v);
-		        adj[v].push_back(u); // nếu vô hướng
+		        adj[v].push_back(u); // nếu vô hướng, có hướng thì bỏ
 		    }
 CÒn đây là khi có số cạnh 
 		file >> n >> m;
 		    for (int i = 0; i < m; i++) {
 		        int u, v; in >> u >> v;
 		        adj[u].push_back(v);
-		        adj[v].push_back(u); // vô hướng
+		        adj[v].push_back(u); //  nếu vô hướng, có hướng thì bỏ
 		    }
 + Đôi với danh sách kề
 		    string line;
@@ -37,17 +42,11 @@ CÒn đây là khi có số cạnh
 		        while (ss >> v)
 				{
 					adj[i].push_back(v);
-					adj[v].push_back(i); //khi đề chỉ cho 1 chiều và bỏ khi cho 2 chiều
+					adj[v].push_back(i); //khi đề chỉ cho 1 chiều và bỏ khi cho 2 chiều và *có hướng*
 				}
 				}
-+ Đối với ma trận kề thì cứ bth 
-			for (int i = 1; i <= n; i++) {
-        		for (int j = 1; j <= n; j++) {
-           			 file >> a[i][j];
-        }
-    }
-	
 	*/
+
 	int n,m;
 	vector<int> adj[100];
  	bool visited[100];
@@ -84,7 +83,6 @@ void bfs(int u)
 				q.push(x);
 				visited[x]=true;
 			}
-			
 		}
 	}
 }
@@ -95,6 +93,7 @@ int main()
 	return 0;
 
 }
+
 
 
 
