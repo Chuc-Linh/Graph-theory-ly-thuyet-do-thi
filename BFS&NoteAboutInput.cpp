@@ -30,13 +30,15 @@ CÒn đây là khi có số cạnh
 		    }
 + Đôi với danh sách kề
 		    string line;
-		    getline(in, line); // bỏ dòng số đỉnh
-		
 		    for (int i = 1; i <= n; i++) {
 		        getline(in, line);
 		        stringstream ss(line);
 		        int v;
-		        while (ss >> v) adj[i].push_back(v);
+		        while (ss >> v)
+				{
+					adj[i].push_back(v);
+					adj[v].push_back(i); //khi đề chỉ cho 1 chiều và bỏ khi cho 2 chiều
+				}
 				}
 + Đối với ma trận kề thì cứ bth 
 			for (int i = 1; i <= n; i++) {
@@ -93,5 +95,6 @@ int main()
 	return 0;
 
 }
+
 
 
