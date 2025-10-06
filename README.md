@@ -5,7 +5,7 @@ Welcome to my repository of exercises and notes on Graph Theory. This repository
 The repository is organized by topic to help you quickly locate problems related to a specific algorithm or concept.
 
 Basic exercises: problems on foundational concepts such as graph definitions, graph types, and graph representations.
-Graph traversals: problems related to DFS (Depth-First Search) and BFS (Breadth-First Search).
+Graph traversals: problems related to DFS (Depth-First Search), BFS (Breadth-First Search), Eulerian and Hamilton circle.
 Shortest paths:
 Dijkstra's algorithm
 Bellman-Ford algorithm
