@@ -7,7 +7,7 @@ set <int> adj[100];
 bool visited[100];
 int degree[100];
 
-
+// the input is a Edge List
 void dfs(int u)
 {
 	visited [u] =true;
@@ -94,4 +94,5 @@ int main()
 
 	return 0;
 }
+
 
