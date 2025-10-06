@@ -14,8 +14,7 @@ int main() {
 
     int n, m;
     fin >> n >> m;
-
-    map<int, set<int>> adj; // danh sách kề: u -> {v}
+    
    vector<int> indeg(n+1,0);
     vector<int>outdeg(n+1,0);
 
@@ -39,5 +38,6 @@ int main() {
 
     return 0;
 }
+
 
 
