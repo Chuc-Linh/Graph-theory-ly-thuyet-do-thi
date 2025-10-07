@@ -15,6 +15,7 @@ CHúng ta sẽ đổi về danh sách kề hết để thực hiện đc đồng
 				{
 					int x;file>>x;
 					if(x==1){
+					// do la luu bang set 
 						adj[i].insert(j);
 						adj[j].insert(i);
 					}
@@ -30,6 +31,7 @@ CÒn đây là khi có số cạnh
 		file >> n >> m;
 		    for (int i = 0; i < m; i++) {
 		        int u, v; in >> u >> v;
+				// dung vector
 		        adj[u].push_back(v);
 		        adj[v].push_back(u); //  nếu vô hướng, có hướng thì bỏ
 		    }
@@ -93,6 +95,7 @@ int main()
 	return 0;
 
 }
+
 
 
 
