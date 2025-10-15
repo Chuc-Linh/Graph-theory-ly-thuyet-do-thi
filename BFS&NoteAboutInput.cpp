@@ -6,7 +6,9 @@ using namespace std;
 
 /* khi đầu vào dữ liệu khác nhau như ma trận kề, danh sách cạnh, danh sách kề thì thuật toán DFS và BFS sẽ không đổi nhưng cách đọc sẽ khác nhau. 
 CHúng ta sẽ đổi về danh sách kề hết để thực hiện đc đồng bộ hơn nek
-+ Bài ở dưới là danh sách cạnh
++ Bài ở dưới là danh sách cạnh thì cậu có 2 cách để lưu
+	- dùng vector<vector<int>> adj[]; khi không trọng số
+	- dùng vector<pair<int,int>> adj[]; khi có trọng số
 + Đối với ma trận kề
 			file>>n;
 			for(int i=1;i<=n;i++)
@@ -15,9 +17,8 @@ CHúng ta sẽ đổi về danh sách kề hết để thực hiện đc đồng
 				{
 					int x;file>>x;
 					if(x==1){
-					// do la luu bang set 
-						adj[i].insert(j);
-						adj[j].insert(i);
+						adj[i].push_back(j);
+						adj[j].push_back(i);
 					}
 				}
 			}
@@ -95,6 +96,7 @@ int main()
 	return 0;
 
 }
+
 
 
 
