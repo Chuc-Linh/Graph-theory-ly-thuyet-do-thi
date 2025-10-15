@@ -66,12 +66,12 @@ void find(int u)
 	while(!st.empty())
 	{
 		int c=st.top();
-		if(a[c].size()!=0)
+		if(adj[c].size()!=0)
 		{
-			int d=*a[c].begin();
+			int d=*adj[c].begin();
 			st.push(d);
-			a[c].erase(d);
-			a[d].erase(c);
+			adj[c].erase(d);
+			adj[d].erase(c);
 		}
 		else {
 			st.pop();
@@ -94,5 +94,6 @@ int main()
 
 	return 0;
 }
+
 
 
