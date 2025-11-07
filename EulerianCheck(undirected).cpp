@@ -68,8 +68,7 @@ void find(int u)
 		int c=st.top();
 		if(adj[c].size()!=0)
 		{
-			// adj[c].begin() là trả về vị trí ban đầu chứ không phải là giá trị oki nếu là vị trí thì hợp lý r đó
-			
+			// lấy phần tử đầu tiên trong danh sách đỉnh kề với c
 			int d=*adj[c].begin();
 			st.push(d);
 			adj[c].erase(d);
@@ -96,6 +95,7 @@ int main()
 
 	return 0;
 }
+
 
 
 
