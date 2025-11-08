@@ -32,7 +32,11 @@ int BFS(int u)
 		for(int x:adj[v])
 		{
 			if(parent [x] ==-1)
-			parent[x] =1 - parent[v];
+			{
+				parent[x] =1 - parent[v];
+				a.push(x);
+			}
+	// nếu đồ thị 2 nút cùng màu thì k là đồ thị 2 phía
 			else if(parent [x] == parent[v])
 			{
 				return 0;
@@ -48,4 +52,5 @@ int main()
 		cout<<" NOT Bipartite Graph";
 		else cout<< "It's a Bipartite Graph";
 	return 0;
+
 }
