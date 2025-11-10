@@ -20,7 +20,7 @@ void dsc()
 	}
 	memset(parent,-1, sizeof(parent));
 }
-int BFS(int u)
+int Check(int u)
 {
 	queue <int> a;
 	a.push(u);
@@ -48,9 +48,10 @@ int BFS(int u)
 int main()
 {
 	dsc();
-	if(!BFS(1))
+	if(!Check(1))
 		cout<<" NOT Bipartite Graph";
 		else cout<< "It's a Bipartite Graph";
 	return 0;
 
 }
+
