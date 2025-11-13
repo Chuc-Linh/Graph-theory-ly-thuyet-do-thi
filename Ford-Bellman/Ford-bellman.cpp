@@ -30,6 +30,7 @@ int main() {
 	// vì đường đi ngắn nhất giữa 2 đỉnh bất  thì đường đi sẽ không lớn hơn n-1 
     for (int i = 1; i <= n - 1; i++)
 		{
+	// biến bool này là để dừng lại nếu  đi ngắn nhất ổn định không có gì thay đổi thì nó sẽ dừng sớm
         bool any = false;
         for (auto e : edges) {
             if (d[e.u] != 1e9 && d[e.v] > d[e.u] + e.w) {
@@ -68,4 +69,5 @@ int main() {
 
     return 0;
 }
+
 
