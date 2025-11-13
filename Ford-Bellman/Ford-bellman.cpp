@@ -27,7 +27,9 @@ int main() {
 
     d[s] = 0;
     // Thuật toán Bellman–Ford
-    for (int i = 1; i <= n - 1; i++) {
+	// vì đường đi ngắn nhất giữa 2 đỉnh bất  thì đường đi sẽ không lớn hơn n-1 
+    for (int i = 1; i <= n - 1; i++)
+		{
         bool any = false;
         for (auto e : edges) {
             if (d[e.u] != 1e9 && d[e.v] > d[e.u] + e.w) {
@@ -66,3 +68,4 @@ int main() {
 
     return 0;
 }
+
