@@ -4,6 +4,7 @@ using namespace std;
 int n, m;
 vector<vector<int>> adj;
 vector<bool> visited;
+// lưu 2 đỉnh
 vector<pair<int,int>> treeEdges;
 
 void BFS_Tree(int start) {
@@ -48,4 +49,5 @@ int main() {
 
     return 0;
 }
+
 
