@@ -8,6 +8,7 @@ vector<pair<int,int>> treeEdges;
 
 void BFS_Tree(int start) {
     queue<int> q;
+    // đếm cạnh của khung cây
     int count =0;
     visited[start] = true;
     q.push(start);
@@ -30,6 +31,7 @@ void BFS_Tree(int start) {
 
 int main() {
     cin >> n >> m;
+    // dùng assign khi có vector nếu mà chỉ bool thì dùng memset 
     adj.assign(n+1, {});
     visited.assign(n+1, false);
 
@@ -46,3 +48,4 @@ int main() {
 
     return 0;
 }
+
