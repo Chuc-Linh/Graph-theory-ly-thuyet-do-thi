@@ -33,10 +33,7 @@ int BFS(int u)
 		{
 			if(parent [x] ==-1)
 			parent[x] =1 - parent[v];
-			else if(parent [x] == parent[v])
-			{
-				return 0;
-			}
+			else if(parent [x] == parent[v]) return 0;
 		}
 	}
 	return 1;
@@ -48,4 +45,5 @@ int main()
 		cout<<" NOT Bipartite Graph";
 		else cout<< "It's a Bipartite Graph";
 	return 0;
+
 }
