@@ -60,10 +60,11 @@ int main()
 	dsc();
 	if(!BFS(1))
 		cout<<" NOT Bipartite Graph";
-	else if(CheckComplete())
+	else if(checkComplete())
 		 cout<< "It's a Complete Bipartite Graph";
 	else cout <<"It's a Bipartite Graph";
 	return 0;
 
 }
+
 
