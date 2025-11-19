@@ -53,7 +53,7 @@ int checkComplete( )
 	// có thể in ra các đỉnh ở 2 phía ở từ code này
 	for (int u : A){ if (adj[u].size() != B.size()) complete = false;}
     for (int u : B){ if (adj[u].size() != A.size()) complete = false;}
-	return true;
+	return complete;
 }
 int main()
 {
@@ -66,5 +66,6 @@ int main()
 	return 0;
 
 }
+
 
 
