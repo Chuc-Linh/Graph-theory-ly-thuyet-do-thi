@@ -27,7 +27,7 @@ int main() {
 
     d[s] = 0;
     // Thuật toán Bellman–Ford
-	// vì đường đi ngắn nhất giữa 2 đỉnh bất  thì đường đi sẽ không lớn hơn n-1 
+	// vì đường đi ngắn nhất giữa 2 đỉnh bất  thì số đỉnh đi qua sẽ không lớn hơn n-1 
     for (int i = 1; i <= n - 1; i++)
 		{
 	// biến bool này là để dừng lại nếu  đi ngắn nhất ổn định không có gì thay đổi thì nó sẽ dừng sớm
@@ -69,5 +69,6 @@ int main() {
 
     return 0;
 }
+
 
 
