@@ -1,4 +1,4 @@
-# 📝 Graph Theory  - Where I Forge My Practice Problems
+# 📝 Lý thuyết đồ thị(Graph Theory )
 Welcome to my repository of exercises and notes on Graph Theory. This repository is created as part of my study and practice in Graph Theory, with the aim of systematizing knowledge, storing solution write-ups, and tracking learning progress.
 
 # 📚 Content
