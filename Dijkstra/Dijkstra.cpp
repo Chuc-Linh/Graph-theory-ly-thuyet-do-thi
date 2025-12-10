@@ -21,10 +21,10 @@ void doc()
 
 void Dijkstra(int s, int t)
 {
+	priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> p;
 	vector<long long> d(n+1,1e9);
 	d[s]=0;
 	pre[s]=s;
-	priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> p;
 	p.push({0,s});
 	while(!p.empty())
 	{
@@ -65,4 +65,5 @@ int main()
 	doc();
 	Dijkstra(s,t);
 	return 0;
+
 }
